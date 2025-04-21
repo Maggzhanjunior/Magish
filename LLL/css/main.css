@@ -1,85 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.text-animation{
-    text-transform: capitalize;
-    font-size:  55px;
-    min-width: 28rem; 
-    text-align: center;   
+
+body{
+    background: #2e4156;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #c0c8ca;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.text-animation span{
-    position: relative;
+.container{
+    text-align: center;
+    margin-top: 150px;
 }
 
-.text-animation span::before{
-    content: "Web Developer";
-    animation: words 20s infinite;
-    color: #d3138c;
+.date-birthday, .date{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    font-size: 30px;
+    
+    padding: 20px 0;
+    
 }
 
-.text-animation span::after{
-    content: "";
-    background-color: #fff;
-    position: absolute;
-    width: calc(100% +8px);
-    height: 100%;
-    border-left: 3px solid #d3138c;
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-}
+@media(max-width: 425px){
+    .date-birthday, .date{
+        gap: 20px;
+    }
 
-@keyframes cursor{
-    to{
-        border-left: 2px solid #d3138c;
+    .container{
+        margin-top: 100px;
     }
 }
 
-
-@keyframes words{
-    0%,
-    20%{
-        content: "Frontend Developer";
-    }
-    21%,
-    40%{
-        content: "Programmer";
-    }
-    41%,
-    60%{
-        content: "Backend Developer"
-    }
-    61%,
-    80%{
-        content: "Web Design";
-    }
-    81%,
-    100%{
-        content: "UI/UX Design"
+@media(max-width: 375px){
+    .date-birthday, .date{
+        font-size: 29px;
+        gap: 10px;
+        
     }
 
+    .container{
+        margin-top: 50px;
+    }
 }
 
-@keyframes typing{
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95%{
-        width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    60%,
-    65%,
-    80%,
-    85%{
-        width: calc(100% + 8px);
+@media(max-width: 320px){
+    .date-birthday, .date{
+        font-size: 25px;
+        gap: 5px;
+        
     }
 }
